@@ -30,7 +30,10 @@ int load_csv(const char *filepath, WaveformSample **samples)
 
     char line[MAX_LINE_LEN];
 
-    /* --- Pass 1: count rows (skip header) --- */
+    /* --- Pass 1: count rows (skip header) ---
+ * Two-pass strategy chosen over realloc to avoid
+ * repeated memory copies and unpredictable performance.
+ * We count first so malloc is called exactly once. --- */
     int row_count = 0;
     /* Skip header line */
     if (!fgets(line, sizeof(line), fp)) {
