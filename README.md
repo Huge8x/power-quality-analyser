@@ -58,8 +58,12 @@ The file `results.txt` is created in the working directory.
 RMS           : ~229.7 V  [COMPLIANT]
 Peak-to-peak  : ~650.0 V
 DC offset     : ~0.000000 V
-Clipped total : 20 samples (all phases)
+Clipped       : 20 per phase (sensor limit 324.9V)
+Frequency     : 50.000 - 50.048 Hz
+Power factor  : 0.956
+THD           : 2.09%
 ```
+
 ---
 
 ## GitHub Repository
